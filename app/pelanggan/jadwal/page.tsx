@@ -4,6 +4,8 @@ import { getServerCoookie } from "@/helper/server-cookie";
 import { axiosInstance } from "@/helper/api";
 import Schedule from "./Schedule";
 
+export const dynamic = "force-dynamic";
+
 const getJadwal = async (departured_location: string, arrived_location: string
 ): Promise<ScheduleType[]> => {
   try {
@@ -24,10 +26,10 @@ const getJadwal = async (departured_location: string, arrived_location: string
   }
 };
 type Props = {
-    searchParams: {
+    searchParams: Promise<{
         departured_location?: string
         arrived_location?: string
-    }
+    }>
 }
 const JadwalPage = async(myProp: Props) => {
     const departured_location = (await myProp.searchParams).departured_location?.toString() || ""

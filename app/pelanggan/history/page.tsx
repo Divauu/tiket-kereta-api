@@ -5,6 +5,8 @@ import { History } from '@/app/karyawan/types'
 import FilterHistory from './FilterHistory'
 import { getServerCoookie } from '@/helper/server-cookie'
 
+export const dynamic = "force-dynamic";
+
 const GetDataHistory = async (departured_time: string, arrived_time: string): Promise<History[]> => {
     try {
         const token = await getServerCoookie('token')
@@ -26,10 +28,10 @@ const GetDataHistory = async (departured_time: string, arrived_time: string): Pr
 }
 
 type props = {
-    searchParams: {
+    searchParams: Promise<{
         departured_time?: string
         arrived_time?: string
-    }
+    }>
 }
 
 const page = async (myProps:props) => {

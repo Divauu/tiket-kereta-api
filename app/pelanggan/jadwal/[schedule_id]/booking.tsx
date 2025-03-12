@@ -49,28 +49,28 @@ const Booking = (myProp: Props) => {
 
             setWagons([...tempWagon])
     }
-    const handleRemoveSeat = (index: number, seatBook: SeatBook) => {
-        const temp = [...details]
-        temp.splice(index, 1)
-        setDetails(temp)
+    // const handleRemoveSeat = (index: number, seatBook: SeatBook) => {
+    //     const temp = [...details]
+    //     temp.splice(index, 1)
+    //     setDetails(temp)
 
-        const tempWagon = [...wagons]
-        /** mencari posisi index dari gerbong yang mempunyai "seat_number" dari yang dipilih oleh pengguna */
-        const findWagonIndex = tempWagon.findIndex(
-            item => item.seats
-                .map(it => it.seat_number)
-                .includes(seatBook.seat_number)
-            )
-            /** mencari posisi index dari kursi yang dipilih */
-            const findSeatIndex = tempWagon[findWagonIndex]
-            .seats.findIndex(
-                item => item.seat_number === seatBook.seat_number
-            )
-            /** ubah status "used" menjadi false */
-            tempWagon[findWagonIndex].seats[findSeatIndex].used = false
+    //     const tempWagon = [...wagons]
+    //     /** mencari posisi index dari gerbong yang mempunyai "seat_number" dari yang dipilih oleh pengguna */
+    //     const findWagonIndex = tempWagon.findIndex(
+    //         item => item.seats
+    //             .map(it => it.seat_number)
+    //             .includes(seatBook.seat_number)
+    //         )
+    //         /** mencari posisi index dari kursi yang dipilih */
+    //         const findSeatIndex = tempWagon[findWagonIndex]
+    //         .seats.findIndex(
+    //             item => item.seat_number === seatBook.seat_number
+    //         )
+    //         /** ubah status "used" menjadi false */
+    //         tempWagon[findWagonIndex].seats[findSeatIndex].used = false
             
-            setWagons([...tempWagon])
-    }
+    //         setWagons([...tempWagon])
+    // }
 
     const handleSave = async() => {
         try {

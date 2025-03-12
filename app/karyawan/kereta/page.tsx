@@ -4,6 +4,8 @@ import { axiosInstance } from "@/helper/api";
 import Train from "./Train";
 import AddKereta from "./addKereta";
 
+export const dynamic = "force-dynamic";
+
 // function to get all data kereta
 const getKereta = async (): Promise<KeretaType[]> => {
     try {

@@ -4,6 +4,8 @@ import { axiosInstance } from "@/helper/api";
 import Employee from "./Employee";
 import AddEmployee from "./addEmployee";
 
+export const dynamic = "force-dynamic";
+
 // Function to get all employee data
 const getEmployee = async (): Promise<EmployeeType[]> => {
     try {

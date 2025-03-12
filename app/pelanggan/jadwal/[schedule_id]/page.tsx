@@ -3,6 +3,8 @@ import { axiosInstance } from "@/helper/api";
 import { getServerCoookie } from "@/helper/server-cookie";
 import Booking from "./booking";
 
+export const dynamic = "force-dynamic";
+
 const showTime = (date: string) => {
     const currentDate = new Date(date)
     return currentDate.toLocaleTimeString(
@@ -52,12 +54,12 @@ const getScheduleDetail = async(schedule_id: number): Promise<ScheduleType | nul
     }
 }
 type Props = {
-    params: {
+    params: Promise<{
         schedule_id: number
-    }
+    }>
 }
 const KeretaDetailPage = async(myProp: Props) => {
-    const schedule_id = Number(myProp.params.schedule_id)
+    const schedule_id = Number((await myProp.params).schedule_id)
     const detailKereta = await getTrainBySchedule(schedule_id)
     const detailSchedule = await getScheduleDetail(schedule_id)
     return (

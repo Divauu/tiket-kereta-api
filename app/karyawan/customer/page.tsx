@@ -4,6 +4,8 @@ import { axiosInstance } from "@/helper/api";
 import Customer from "./Customer"; 
 import AddCustomer from "./addCustomer"; 
 
+export const dynamic = "force-dynamic";
+
 const getCustomers = async (): Promise<CustomerType[]> => {
     try {
         /** get token from cookie */
@@ -55,3 +57,4 @@ const CustomerPage = async () => {
 }
 
 export default CustomerPage;
+
