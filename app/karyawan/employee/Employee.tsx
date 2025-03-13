@@ -2,6 +2,8 @@ import { EmployeeType } from "../types"
 import EditEmployee from "./editEmployee"
 import DropEmployee from "./dropEmployee"
 import ResetPassword from "./resetPassEmployee"
+export const dynamic = "force-dynamic";
+
 
 type props = {
     item: EmployeeType

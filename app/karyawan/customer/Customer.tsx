@@ -2,6 +2,8 @@ import { CustomerType } from "../types";
 import EditCustomer from "./editCustomer"; 
 import DropCustomer from "./dropCustomer"; 
 import ResetPassword from "./resetPassCustomer"; 
+export const dynamic = "force-dynamic";
+
 
 type Props = {
     customer: CustomerType

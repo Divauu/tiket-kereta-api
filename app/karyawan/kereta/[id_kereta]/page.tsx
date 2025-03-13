@@ -9,6 +9,7 @@ import Gerbong from "./Gerbong";
 import AddGerbong from "./addGerbong";
 
 
+
 const getDetailKereta = async(
     id_kereta: string
 ):Promise<KeretaType | null> => {

@@ -1,6 +1,8 @@
 import { KursiType } from "../../types"
 import DropKursi from "./dropSeat"
 import EditKursi from "./editSeat"
+export const dynamic = "force-dynamic";
+
 
 type props = {
     item: KursiType

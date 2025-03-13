@@ -3,6 +3,8 @@ import AddKursi from "./addSeat"
 import DropGerbong from "./dropGerbong"
 import EditGerbong from "./editGerbong"
 import Seat from "./Seat"
+export const dynamic = "force-dynamic";
+
 
 type props = {
     item: GerbongType

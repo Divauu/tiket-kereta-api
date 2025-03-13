@@ -1,4 +1,6 @@
 import { Purchase , ScheduleType } from "@/app/karyawan/types";
+export const dynamic = "force-dynamic";
+
 
 interface History {
    id: number;

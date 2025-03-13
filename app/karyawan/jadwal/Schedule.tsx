@@ -1,6 +1,8 @@
 import { ScheduleType } from "../types";
 import DropSchedule from "./dropSchedule";
 import EditSchedule from "./editSchedule";
+export const dynamic = "force-dynamic";
+
 
 type props = {
   item: ScheduleType;
