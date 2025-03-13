@@ -97,7 +97,7 @@ const LoginPage = () => {
             required={true}
             className="w-full p-2 border rounded-md"/>
           </div>
-          <button type="submit" className="bg-green-600 hover:bg-green-500 text-white w-full rounded-md px-4 py-2"> Login</button>
+          <button type="submit" className="bg-green-600 hover:bg-green-500 text-white w-full rounded-md px-4 py-2">Login</button>
         </div>
       </form>
     </div>
