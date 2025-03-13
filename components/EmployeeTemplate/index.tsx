@@ -90,7 +90,7 @@ const EmployeTemplate = (myProp: props) => {
             Data Admin
           </Link>
           <Link
-            href={`/karyawan/pelanggan`}
+            href={`/karyawan/customer`}
             className="w-full rounded-md text-white p-3 font-semibold hover:bg-blue-500 "
           >
             Data Pelanggan
